@@ -5,67 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <!--Import materialize.css-->
     <link href="../css/reset.css"/>
-    <link href="../css/grid.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
 
 </head>
 
-<body>
-<!--Import jQuery before materialize.js-->
+<body class="body">
+    <!--Import jQuery before materialize.js-->
+    <nav>
+        <ul id="tools-dropdown" class="tools-items dropdown-content">
 
-<nav>
-    <ul class="right hide-on-med-and-down">
-        <li><a href="#!"></a></li>
-    </ul>
-    <ul id="slide-out" class="side-nav">
-        <li><a href="#!"></a></li>
-    </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-</nav>
-<div class="">
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="row">
-            <form id="searchForm">
-                <div class="input-field col s6">
-                    <input placeholder="contains" id="first_name" type="text" class="validate">
-                    <label for="first_name">SEARCH</label>
-                </div>
-            </form>
-        </div>
-        <div class="col m12">
-            <table>
-                <thead>
-                <tr>
-                    <th data-field="lastname">LAST NAME</th>
-                    <th data-field="firstname">FIRST Name</th>
-                    <th data-field="middlename">MIDDLE NAME</th>
-                    <th data-field="nickname">NICKNAME</th>
-                    <th data-field="birthdate">BIRTHDATE</th>
-                </tr>
-                </thead>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#!">HOME</a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="tools-dropdown">TOOLS</a></li>
+            <li><a href="#!">ABOUT</a></li>
+            <li><a href="#!">LOG OUT</a></li>
+        </ul>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="#!">HOME</a></li>
+            <li class="no-padding">
+                <ul class="collapsible collapsible-accordion">
+                    <li>
+                        <a class="collapsible-header">TOOLS</a>
+                        <div class="collapsible-body">
+                            <ul class="tools-items">
 
-                <tbody>
-                <tr>
-                    <td colspan="5" id="noentries" class="center"><h3>No Entries</h3></td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#!">ABOUT</a></li>
+            <li><a href="#!">LOG OUT</a></li>
+        </ul>
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="../js/materialize.min.js"></script>
+    <main id="content">
+
+    </main>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $('.button-collapse').sideNav({
-                    menuWidth: 300, // Default is 240
+                    menuWidth: 400, // Default is 240
                     edge: 'left', // Choose the horizontal origin
                     closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
                 }
-        );
+                );
     });
 </script>
+<script src="../js/communityprofile.min.js" type="text/javascript" charset="utf-8" async defer></script>
 </body>
 </html>
