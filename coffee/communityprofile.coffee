@@ -21,4 +21,5 @@ $(document).ready ->
 	# 	$(".body").html data
 	# 	null
 	# 	)
+	addToolItems()
 	null

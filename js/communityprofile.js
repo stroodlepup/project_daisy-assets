@@ -19,5 +19,6 @@ addToolItems = function() {
 };
 
 $(document).ready(function() {
+  addToolItems();
   return null;
 });
